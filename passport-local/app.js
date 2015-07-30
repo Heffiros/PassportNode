@@ -16,9 +16,9 @@ mongoose.connect('mongodb://localhost/profil', function(err) {
    throw err
    }
   else {
-  	var User = require('./user_model.js');
-
-	User.findOne({'pseudo': username} , {'password' : password}, function(rer, user){
+	console.log('ok2222')
+	var User = require('./user_model.js');
+	User.findOne({'pseudo': "Alexandre"} , {'password' : 'toto'}, function(rer, user){
 		if (rer) {
 			return 'toto';
 		} else {
@@ -28,6 +28,7 @@ mongoose.connect('mongodb://localhost/profil', function(err) {
   }
 
 });
+
 /*MongoClient.connect("mongodb://127.0.0.1:27017/local", function(err, db) {
   if(!err) {
     console.log("We are connected");
