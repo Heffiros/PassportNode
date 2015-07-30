@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>PassPort</title>
+
+	</head>
+
+	<body>
+		<% if (!isAuthenticated) { %>
+			<a href="/login">Log in</a>
+
+		<%} else { %>
+			Hello, <%= user.name %>	!
+			<% } %> 
+	</body>
+</html>
