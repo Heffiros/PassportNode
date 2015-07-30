@@ -8,7 +8,7 @@ var Schema = mongoose.Schema;
  
 // Création du schéma pour les commentaires
 var userSchema = new Schema({
-   pseudo:String,
-   password:String,
+  username: { type: String, require: true },
+   password: { type: String, require: true }
 });
 module.exports = mongoose.model('user', userSchema);
